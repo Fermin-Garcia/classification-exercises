@@ -17,6 +17,7 @@ def wrangle_iris():
 
 
 def prep_titanic(df):
+    import pandas as pd
     df = df.drop(columns=['passenger_id','embarked','deck','class'])
     df['age'] = df['age'].fillna(df.age.mean())
     df['embark_town'] = df['embark_town'].fillna('Southampton')
